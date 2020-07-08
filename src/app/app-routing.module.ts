@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: "",
     redirectTo: "dashboard",
-    pathMatch: "full"
+    pathMatch: "full",
   },
   {
     path: "",
@@ -19,50 +19,49 @@ const routes: Routes = [
     children: [
       {
         path: "",
-        loadChildren:
-          "./pages/examples/dashboard/dashboard.module#DashboardModule"
+        loadChildren: "./pages/examples/charts/charts.module#ChartsModule",
       },
       {
         path: "components",
         loadChildren:
-          "./pages/examples/components/components.module#ComponentsPageModule"
+          "./pages/examples/components/components.module#ComponentsPageModule",
       },
       {
         path: "forms",
-        loadChildren: "./pages/examples/forms/forms.module#Forms"
+        loadChildren: "./pages/examples/forms/forms.module#Forms",
       },
       {
         path: "tables",
-        loadChildren: "./pages/examples/tables/tables.module#TablesModule"
+        loadChildren: "./pages/examples/tables/tables.module#TablesModule",
       },
       {
         path: "maps",
-        loadChildren: "./pages/examples/maps/maps.module#MapsModule"
+        loadChildren: "./pages/examples/maps/maps.module#MapsModule",
       },
       {
         path: "widgets",
-        loadChildren: "./pages/examples/widgets/widgets.module#WidgetsModule"
+        loadChildren: "./pages/examples/widgets/widgets.module#WidgetsModule",
       },
       {
         path: "charts",
-        loadChildren: "./pages/examples/charts/charts.module#ChartsModule"
+        loadChildren: "./pages/examples/charts/charts.module#ChartsModule",
       },
       {
         path: "calendar",
         loadChildren:
-          "./pages/examples/calendar/calendar.module#CalendarModulee"
+          "./pages/examples/calendar/calendar.module#CalendarModulee",
       },
       {
         path: "",
         loadChildren:
-          "./pages/examples/pages/user/user-profile.module#UserModule"
+          "./pages/examples/pages/user/user-profile.module#UserModule",
       },
       {
         path: "",
         loadChildren:
-          "./pages/examples/pages/timeline/timeline.module#TimelineModule"
-      }
-    ]
+          "./pages/examples/pages/timeline/timeline.module#TimelineModule",
+      },
+    ],
   },
   {
     path: "",
@@ -70,9 +69,9 @@ const routes: Routes = [
     children: [
       {
         path: "pages",
-        loadChildren: "./pages/examples/pages/pages.module#PagesModule"
-      }
-    ]
+        loadChildren: "./pages/examples/pages/pages.module#PagesModule",
+      },
+    ],
   },
   {
     path: "",
@@ -80,14 +79,14 @@ const routes: Routes = [
     children: [
       {
         path: "pages",
-        loadChildren: "./pages/examples/pages/rtl/rtl.module#RtlModule"
-      }
-    ]
+        loadChildren: "./pages/examples/pages/rtl/rtl.module#RtlModule",
+      },
+    ],
   },
   {
     path: "**",
-    redirectTo: "dashboard"
-  }
+    redirectTo: "dashboard",
+  },
 ];
 
 @NgModule({
@@ -98,9 +97,9 @@ const routes: Routes = [
       useHash: true,
       scrollPositionRestoration: "enabled",
       anchorScrolling: "enabled",
-      scrollOffset: [0, 64]
-    })
+      scrollOffset: [0, 64],
+    }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
