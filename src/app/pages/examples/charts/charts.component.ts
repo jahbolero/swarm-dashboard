@@ -3,7 +3,7 @@ import Chart from "chart.js";
 
 @Component({
   selector: "app-charts",
-  templateUrl: "charts.component.html"
+  templateUrl: "charts.component.html",
 })
 export class ChartsComponent implements OnInit {
   public canvas: any;
@@ -15,7 +15,7 @@ export class ChartsComponent implements OnInit {
     var gradientChartOptionsConfigurationPurple = {
       maintainAspectRatio: false,
       legend: {
-        display: false
+        display: false,
       },
 
       tooltips: {
@@ -26,7 +26,7 @@ export class ChartsComponent implements OnInit {
         xPadding: 12,
         mode: "nearest",
         intersect: 0,
-        position: "nearest"
+        position: "nearest",
       },
       responsive: true,
       scales: {
@@ -36,15 +36,15 @@ export class ChartsComponent implements OnInit {
             gridLines: {
               drawBorder: false,
               color: "rgba(186,84,245,0.1)",
-              zeroLineColor: "transparent"
+              zeroLineColor: "transparent",
             },
             ticks: {
               suggestedMin: 60,
               suggestedMax: 125,
               padding: 20,
-              fontColor: "#9e9e9e"
-            }
-          }
+              fontColor: "#9e9e9e",
+            },
+          },
         ],
 
         xAxes: [
@@ -53,21 +53,21 @@ export class ChartsComponent implements OnInit {
             gridLines: {
               drawBorder: false,
               color: "rgba(186,84,245,0.1)",
-              zeroLineColor: "transparent"
+              zeroLineColor: "transparent",
             },
             ticks: {
               padding: 20,
-              fontColor: "#9e9e9e"
-            }
-          }
-        ]
-      }
+              fontColor: "#9e9e9e",
+            },
+          },
+        ],
+      },
     };
 
     var gradientChartOptionsConfigurationBlue = {
       maintainAspectRatio: false,
       legend: {
-        display: false
+        display: false,
       },
 
       tooltips: {
@@ -78,7 +78,7 @@ export class ChartsComponent implements OnInit {
         xPadding: 12,
         mode: "nearest",
         intersect: 0,
-        position: "nearest"
+        position: "nearest",
       },
       responsive: true,
       scales: {
@@ -88,15 +88,15 @@ export class ChartsComponent implements OnInit {
             gridLines: {
               drawBorder: false,
               color: "rgba(29,140,248,0.0)",
-              zeroLineColor: "transparent"
+              zeroLineColor: "transparent",
             },
             ticks: {
               suggestedMin: 60,
               suggestedMax: 125,
               padding: 20,
-              fontColor: "#9e9e9e"
-            }
-          }
+              fontColor: "#9e9e9e",
+            },
+          },
         ],
 
         xAxes: [
@@ -105,21 +105,21 @@ export class ChartsComponent implements OnInit {
             gridLines: {
               drawBorder: false,
               color: "rgba(29,140,248,0.1)",
-              zeroLineColor: "transparent"
+              zeroLineColor: "transparent",
             },
             ticks: {
               padding: 20,
-              fontColor: "#9e9e9e"
-            }
-          }
-        ]
-      }
+              fontColor: "#9e9e9e",
+            },
+          },
+        ],
+      },
     };
 
     var gradientBarChartConfiguration = {
       maintainAspectRatio: false,
       legend: {
-        display: false
+        display: false,
       },
 
       tooltips: {
@@ -130,7 +130,7 @@ export class ChartsComponent implements OnInit {
         xPadding: 12,
         mode: "nearest",
         intersect: 0,
-        position: "nearest"
+        position: "nearest",
       },
       responsive: true,
       scales: {
@@ -139,15 +139,15 @@ export class ChartsComponent implements OnInit {
             gridLines: {
               drawBorder: false,
               color: "rgba(253,93,147,0.1)",
-              zeroLineColor: "transparent"
+              zeroLineColor: "transparent",
             },
             ticks: {
               suggestedMin: 60,
               suggestedMax: 125,
               padding: 20,
-              fontColor: "#9e9e9e"
-            }
-          }
+              fontColor: "#9e9e9e",
+            },
+          },
         ],
 
         xAxes: [
@@ -155,21 +155,21 @@ export class ChartsComponent implements OnInit {
             gridLines: {
               drawBorder: false,
               color: "rgba(253,93,147,0.1)",
-              zeroLineColor: "transparent"
+              zeroLineColor: "transparent",
             },
             ticks: {
               padding: 20,
-              fontColor: "#9e9e9e"
-            }
-          }
-        ]
-      }
+              fontColor: "#9e9e9e",
+            },
+          },
+        ],
+      },
     };
 
     var gradientBarChartConfigurationWithGrid = {
       maintainAspectRatio: false,
       legend: {
-        display: false
+        display: false,
       },
 
       tooltips: {
@@ -180,7 +180,7 @@ export class ChartsComponent implements OnInit {
         xPadding: 12,
         mode: "nearest",
         intersect: 0,
-        position: "nearest"
+        position: "nearest",
       },
       responsive: true,
       scales: {
@@ -189,15 +189,15 @@ export class ChartsComponent implements OnInit {
             gridLines: {
               drawBorder: false,
               color: "rgba(253,93,147,0.1)",
-              zeroLineColor: "transparent"
+              zeroLineColor: "transparent",
             },
             ticks: {
               suggestedMin: 60,
               suggestedMax: 125,
               padding: 20,
-              fontColor: "#9e9e9e"
-            }
-          }
+              fontColor: "#9e9e9e",
+            },
+          },
         ],
 
         xAxes: [
@@ -205,18 +205,19 @@ export class ChartsComponent implements OnInit {
             gridLines: {
               drawBorder: false,
               color: "rgba(253,93,147,0.1)",
-              zeroLineColor: "transparent"
+              zeroLineColor: "transparent",
             },
             ticks: {
               padding: 20,
-              fontColor: "#9e9e9e"
-            }
-          }
-        ]
-      }
+              fontColor: "#9e9e9e",
+            },
+          },
+        ],
+      },
     };
 
-    this.canvas = document.getElementById("chartSimpleWithGradient");
+    //airhumidity
+    this.canvas = document.getElementById("ah-chart");
     this.ctx = this.canvas.getContext("2d");
     var gradientStroke = this.ctx.createLinearGradient(0, 230, 0, 50);
 
@@ -228,7 +229,7 @@ export class ChartsComponent implements OnInit {
       type: "line",
       responsive: true,
       data: {
-        labels: ["JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+        labels: ["8:43", "8:53", "9:03", "9:13", "9:23", "9:33"],
         datasets: [
           {
             label: "Data",
@@ -246,14 +247,14 @@ export class ChartsComponent implements OnInit {
             pointHoverRadius: 4,
             pointHoverBorderWidth: 15,
             pointRadius: 4,
-            data: [80, 100, 70, 80, 120, 80]
-          }
-        ]
+            data: [45, 55, 58, 49, 60, 52, 62],
+          },
+        ],
       },
-      options: gradientChartOptionsConfigurationPurple
+      options: gradientChartOptionsConfigurationPurple,
     });
-
-    this.canvas = document.getElementById("chartWithNumbersAndGrid");
+    //airtemperature
+    this.canvas = document.getElementById("at-chart");
     this.ctx = this.canvas.getContext("2d");
     var gradientStroke = this.ctx.createLinearGradient(0, 230, 0, 50);
 
@@ -265,7 +266,7 @@ export class ChartsComponent implements OnInit {
       type: "line",
       responsive: true,
       data: {
-        labels: ["JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+        labels: ["8:43", "8:53", "9:03", "9:13", "9:23", "9:33"],
         datasets: [
           {
             label: "Data",
@@ -278,15 +279,54 @@ export class ChartsComponent implements OnInit {
             pointBackgroundColor: "#2380f7",
             pointBorderColor: "rgba(255,255,255,0)",
             pointHoverBackgroundColor: "#2380f7",
+            //pointHoverBorderColor:'rgba(35,46,55,1)',
             pointBorderWidth: 20,
             pointHoverRadius: 4,
             pointHoverBorderWidth: 15,
             pointRadius: 4,
-            data: [80, 100, 70, 80, 120, 80]
-          }
-        ]
+            data: [21, 23, 21, 22, 26, 22],
+          },
+        ],
       },
-      options: gradientChartOptionsConfigurationBlue
+      options: gradientChartOptionsConfigurationBlue,
+    });
+
+    //lightintensity
+    this.canvas = document.getElementById("li-chart");
+    this.ctx = this.canvas.getContext("2d");
+    var gradientStroke = this.ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke.addColorStop(1, "rgba(72,72,176,0.4)");
+    gradientStroke.addColorStop(0.8, "rgba(72,72,176,0.2)");
+    gradientStroke.addColorStop(0, "rgba(119,52,169,0)"); //purple colors
+
+    var myChart = new Chart(this.ctx, {
+      type: "line",
+      responsive: true,
+      data: {
+        labels: ["8:43", "8:53", "9:03", "9:13", "9:23", "9:33"],
+        datasets: [
+          {
+            label: "Data",
+            fill: true,
+            backgroundColor: gradientStroke,
+            borderColor: "#ff8a76",
+            borderWidth: 2,
+            borderDash: [],
+            borderDashOffset: 0.0,
+            pointBackgroundColor: "#ff8a76",
+            pointBorderColor: "rgba(255,255,255,0)",
+            pointHoverBackgroundColor: "#ff8a76",
+            //pointHoverBorderColor:'rgba(35,46,55,1)',
+            pointBorderWidth: 20,
+            pointHoverRadius: 4,
+            pointHoverBorderWidth: 15,
+            pointRadius: 4,
+            data: [23, 22, 20, 22, 23, 24],
+          },
+        ],
+      },
+      options: gradientChartOptionsConfigurationPurple,
     });
 
     this.canvas = document.getElementById("BarChart");
@@ -300,7 +340,7 @@ export class ChartsComponent implements OnInit {
       type: "bar",
       responsive: true,
       data: {
-        labels: ["JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+        labels: ["8:43", "8:53", "9:03", "9:13", "9:23", "9:33"],
         datasets: [
           {
             label: "Data",
@@ -311,11 +351,11 @@ export class ChartsComponent implements OnInit {
             borderWidth: 2,
             borderDash: [],
             borderDashOffset: 0.0,
-            data: [80, 100, 70, 80, 120, 80]
-          }
-        ]
+            data: [80, 100, 70, 80, 120, 80],
+          },
+        ],
       },
-      options: gradientBarChartConfigurationWithGrid
+      options: gradientBarChartConfigurationWithGrid,
     });
 
     this.canvas = document.getElementById("MultipleBarsChart");
@@ -325,7 +365,7 @@ export class ChartsComponent implements OnInit {
       type: "bar",
       responsive: true,
       data: {
-        labels: ["JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+        labels: ["8:43", "8:53", "9:03", "9:13", "9:23", "9:33"],
         datasets: [
           {
             label: "Data",
@@ -336,7 +376,7 @@ export class ChartsComponent implements OnInit {
             borderWidth: 2,
             borderDash: [],
             borderDashOffset: 0.0,
-            data: [80, 100, 70, 80, 120, 80]
+            data: [80, 100, 70, 80, 120, 80],
           },
           {
             label: "Data",
@@ -347,11 +387,11 @@ export class ChartsComponent implements OnInit {
             borderWidth: 2,
             borderDash: [],
             borderDashOffset: 0.0,
-            data: [60, 110, 90, 70, 90, 100]
-          }
-        ]
+            data: [60, 110, 90, 70, 90, 100],
+          },
+        ],
       },
-      options: gradientBarChartConfiguration
+      options: gradientBarChartConfiguration,
     });
 
     this.canvas = document.getElementById("PieChart");
@@ -368,14 +408,14 @@ export class ChartsComponent implements OnInit {
             pointHoverRadius: 0,
             backgroundColor: ["#00c09d", "#e2e2e2"],
             borderWidth: 0,
-            data: [60, 40]
-          }
-        ]
+            data: [60, 40],
+          },
+        ],
       },
       options: {
         cutoutPercentage: 70,
         legend: {
-          display: false
+          display: false,
         },
 
         tooltips: {
@@ -386,7 +426,7 @@ export class ChartsComponent implements OnInit {
           xPadding: 12,
           mode: "nearest",
           intersect: 0,
-          position: "nearest"
+          position: "nearest",
         },
 
         scales: {
@@ -394,14 +434,14 @@ export class ChartsComponent implements OnInit {
             {
               display: 0,
               ticks: {
-                display: false
+                display: false,
               },
               gridLines: {
                 drawBorder: false,
                 zeroLineColor: "transparent",
-                color: "rgba(255,255,255,0.05)"
-              }
-            }
+                color: "rgba(255,255,255,0.05)",
+              },
+            },
           ],
 
           xAxes: [
@@ -411,15 +451,15 @@ export class ChartsComponent implements OnInit {
               gridLines: {
                 drawBorder: false,
                 color: "rgba(255,255,255,0.1)",
-                zeroLineColor: "transparent"
+                zeroLineColor: "transparent",
               },
               ticks: {
-                display: false
-              }
-            }
-          ]
-        }
-      }
+                display: false,
+              },
+            },
+          ],
+        },
+      },
     });
 
     this.canvas = document.getElementById("PieChartGradient");
@@ -436,14 +476,14 @@ export class ChartsComponent implements OnInit {
             pointHoverRadius: 0,
             backgroundColor: ["#ff8779", "#2a84e9", "#e2e2e2"],
             borderWidth: 0,
-            data: [60, 40, 20]
-          }
-        ]
+            data: [60, 40, 20],
+          },
+        ],
       },
       options: {
         cutoutPercentage: 70,
         legend: {
-          display: false
+          display: false,
         },
 
         tooltips: {
@@ -454,7 +494,7 @@ export class ChartsComponent implements OnInit {
           xPadding: 12,
           mode: "nearest",
           intersect: 0,
-          position: "nearest"
+          position: "nearest",
         },
 
         scales: {
@@ -462,14 +502,14 @@ export class ChartsComponent implements OnInit {
             {
               display: 0,
               ticks: {
-                display: false
+                display: false,
               },
               gridLines: {
                 drawBorder: false,
                 zeroLineColor: "transparent",
-                color: "rgba(255,255,255,0.05)"
-              }
-            }
+                color: "rgba(255,255,255,0.05)",
+              },
+            },
           ],
 
           xAxes: [
@@ -479,15 +519,15 @@ export class ChartsComponent implements OnInit {
               gridLines: {
                 drawBorder: false,
                 color: "rgba(255,255,255,0.1)",
-                zeroLineColor: "transparent"
+                zeroLineColor: "transparent",
               },
               ticks: {
-                display: false
-              }
-            }
-          ]
-        }
-      }
+                display: false,
+              },
+            },
+          ],
+        },
+      },
     });
   }
 }
